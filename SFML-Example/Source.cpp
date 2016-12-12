@@ -24,6 +24,7 @@ int main()
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
+			//check if we closed the game window
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
@@ -31,6 +32,7 @@ int main()
 		window.clear();
 		sf::Time currentDt = deltaTime.restart();
 		
+		//this is a unneccessary comment
 		for (std::vector<GameObject*>::iterator it = gameObjects.begin(); it != gameObjects.end(); it++)
 		{
 			(*it)->update(currentDt);
